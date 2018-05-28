@@ -17,10 +17,10 @@ int main(void)
 	printf("It stores the value %d\n", *ptrtoa);
 	printf("The address of a is %d\n", &a);
 
-	float d = 2.3;
+	float d = 8;
 	float* ptrtod = &d;
 
-	float e = 5.7;
+	float e = 7;
 	float* ptrtoe = &e;
 
 	printf("The value of d is %f and the address is %d\n", d, ptrtod);
