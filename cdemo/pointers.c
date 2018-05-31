@@ -1,37 +1,35 @@
 #include <stdio.h>
 
-int main()
+int main(void) 
 {
- 
   int a;
-  int* ptrtoa;
+	int* ptrtoa;
 
-  ptrtoa = &a;
+	ptrtoa = &a;
 
-  a = 5;
-  printf("The value of a is %d\n", a);
+	a = 5;
+	printf("The value of a is %d\n", a);
 
-  *ptrtoa = 6;
-  printf("The value of a is %d\n", a);
+	*ptrtoa = 6;
+	printf("The value of a is %d\n", a);
 
-  printf("The value of ptrtoa is %d\n", ptrtoa);
-  printf("It stores the value %d\n", *ptrtoa);
-  printf("The address of a is %d\n", &a);
-int d;
-int *ptrtod;
-ptrtod = &d;
-d = 4;
-*ptrtod = 6; 
-printf("The value of d is %d\n", *ptrtod);
-printf("The address of d is %d\n", &d); 
-printf("The value of ptrtod is %d\n", ptrtod);
-int e;
-int *ptrtoe;
-ptrtoe = &e;
-e = 20;
-*ptrtoe = 25; 
-printf("The value of e is %d\n", *ptrtoe);
-printf("The address of e is %d\n", &e); 
-printf("The value of ptrtoe is %d\n", ptrtoe);
+	printf("The value of ptrtoa is %d\n", ptrtoa);
+	printf("It stores the value %d\n", *ptrtoa);
+	printf("The address of a is %d\n", &a);
 
+	float d = 8;
+	float* ptrtod = &d;
+
+	float e = 7;
+	float* ptrtoe = &e;
+
+	printf("The value of d is %f and the address is %d\n", d, ptrtod);
+	printf("The value of e is %f and the address is %d\n", e, ptrtoe);
+
+	float temp = *ptrtoe;
+	*ptrtoe = *ptrtod;
+	*ptrtod = temp;
+
+	printf("The value of d is %f\n", *ptrtod);
+	printf("The value of e is %f\n", *ptrtoe);
 }
